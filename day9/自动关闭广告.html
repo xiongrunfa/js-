@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="images/ad.jpg" alt="" class="ad">
+    <button>我不要广告消失</button>
+    <script>
+        var ad = document.querySelector('.ad');
+        var timer = setTimeout(function () {
+            ad.style.display = 'none'
+        }, 5000)
+        // 还可以取消定时器
+        var btn = document.querySelector('button');
+        btn.addEventListener('click', function () {
+            clearTimeout(timer);
+        })
+
+    </script>
+</body>
+
+</html>

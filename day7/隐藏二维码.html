@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隐藏二维码</title>
+    <style>
+        .box {
+            position: relative;
+            width: 160px;
+            height: 172px;
+            text-align: center;
+            border: 1px solid #ef4f2b;
+            margin: 100px auto;
+        }
+
+        .box img {
+            display: block;
+        }
+
+        .close {
+            position: absolute;
+            top: 0;
+            left: -13px;
+            display: block;
+            text-align: center;
+            line-height: 12px;
+            width: 12px;
+            height: 12px;
+            border: 1px solid #ef4f2b;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        淘宝二维码
+        <img src="images/tao.png" alt="">
+        <i class="close">×</i>
+    </div>
+    <script>
+        var btn = document.querySelector('.close');
+        var box = document.querySelector('.box');
+        btn.onclick = function () {
+            box.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

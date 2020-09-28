@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var str = 'qwzsdbzwewfzzverwab'
+        var o = {};
+        for (var i = 0; i < str.length; i++) {
+            var chars = str.charAt(i);
+            if (o[chars]) {
+                o[chars]++
+            } else {
+                o[chars] = 1
+            }
+        }
+        var max = 0
+        var ch = ''
+        for (var k in o) {
+            if (o[k] > max) {
+                max = o[k];
+                ch = k
+
+            }
+        }
+        console.log('出现次数最多的字符是：' + ch + '\n' + '出现的次数是' + max);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

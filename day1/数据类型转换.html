@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1. 把数字转换成字符串型 变量.toString()
+        var num = 10;
+        var str = num.toString();
+        console.log(str);
+        //2. 我们利用 String(变量)
+        console.log(String(num));
+        //3. 利用 + 拼接字符串的方法实现转换效果 隐式转换
+        console.log(num + '');
+
+        // 把数字型转换成字符串型
+        //1. parseInt(变量) 得到的是整数
+        var age = prompt('请输入您的年龄')
+        console.log(parseInt(age));
+        console.log(parseInt('3.14')); // 得到3 取整
+        console.log(parseInt('3.98')); // 得到3 取整
+        console.log(parseInt('120px')); // 120 会去掉这个px单位
+        console.log(parseInt('qwe120px')); // NaN
+        // 2. parseFloat(变量) 得到的是小数 浮点数
+        console.log(parseFloat('3.14')); // 3.14
+        console.log(parseFloat('120px')); // 120 也会去掉单位
+        console.log(parseFloat('rem120px')); // NaN
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

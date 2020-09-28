@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function arrrank() {
+            for (var i = 0; i <= arguments.length - 1; i++) {
+                for (var j = 0; j <= arguments.length - i - 1; j++) {
+                    if (arguments[j] > arguments[j + 1]) {
+                        var temp = arguments[j];
+                        arguments[j] = arguments[j + 1];
+                        arguments[j + 1] = temp;
+                    }
+                }
+            }
+            return arguments;
+        }
+        console.log(arrrank(101, 73, 7, 29, 10, 22, 65)); 
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

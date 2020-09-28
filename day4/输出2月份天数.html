@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1.判断年份是否是闰年
+        function isrunyear(year) {
+            var flag = false;
+            if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+                flag = true
+            }
+            return flag
+        }
+        // 2.输出2月份的天数
+        function backday() {
+            var year = prompt('请您输入年份：');
+            if (isrunyear(year)) {
+                alert('当前年份是闰年，2月份有29天')
+            } else {
+                alert('当前年份是平年，2月份有28天')
+            }
+        }
+        backday()
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

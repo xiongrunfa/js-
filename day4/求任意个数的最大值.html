@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 利用函数求任意个数的最大值
+        function getmax() {
+            var max = arguments[0];
+            for (var i = 1; i < arguments.length; i++) {
+                if (arguments[i] > max) {
+                    max = arguments[i]
+                }
+            }
+            return max
+        }
+        console.log(getmax(1, 23, 4, 26, 17, 55));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

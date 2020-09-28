@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>循环精灵图</title>
+    <style>
+        div {
+            width: 296px;
+            margin: 100px auto;
+        }
+
+        li {
+            float: left;
+            width: 24px;
+            height: 24px;
+            background-color: pink;
+            margin-right: 50px;
+            margin-bottom: 24px;
+            list-style: none;
+            background: url(images1/sprite.png) no-repeat 0 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </div>
+    <script>
+        var li = document.querySelectorAll('li');
+        for (var i = 0; i < li.length; i++) {
+            var index = i * 44;
+            li[i].style.backgroundPosition = '0 -' + index + 'px';
+        }
+    </script>
+</body>
+
+</html>

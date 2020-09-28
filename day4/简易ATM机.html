@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简易ATM机</title>
+    <script>
+        var option = prompt('请输入您要的操作：' + '\n' + '1.存钱' + '\n' + '2.取钱' + '\n' + '3.显示余额' + '\n' + '4.退出');
+        var sum = 100;
+        while (option <= 4) {
+            if (option == 1) {
+                var stock = prompt('请输入您的存钱数额：');
+                sum += parseInt(stock);
+                alert('您现在的余额为' + sum + '元')
+            } else if (option == 2) {
+                var output = prompt('请输入您的取钱数额：');
+                sum -= parseInt(output);
+                alert('您现在的余额为' + sum + '元')
+            } else if (option == 3) {
+                alert('您现在的余额为' + sum + '元')
+            } else {
+                alert('您已经退出');
+                break;
+            }
+            var option = prompt('请输入您要的操作：' + '\n' + '1.存钱' + '\n' + '2.取钱' + '\n' + '3.显示余额 ' + '\n' + '4.退出');
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

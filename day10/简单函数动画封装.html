@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简单函数动画封装</title>
+    <style>
+        div {
+            position: absolute;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        span {
+            position: absolute;
+            top: 300px;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn500">点击夏雨荷走500</button>
+    <button class="btn800">点击夏雨荷走800</button>
+    <div class=""></div>
+    <span>夏雨荷</span>
+    <script>
+        function animate(obj, target, callBack) {
+            clearInterval(obj.timer);
+            obj.timer = setInterval(function () {
+                var step = (target - obj.offsetLeft) / 10;  //每次移动的距离 是一个变化的量 为了实现缓动动画
+                step = step > 0 ? Math.ceil(step) : Math.floor(step);
+                if (obj.offsetLeft == target) {
+                    clearInterval(obj.timer);
+                    if (callBack) {
+                        callBack();
+                    }
+                } else {
+                    obj.style.left = obj.offsetLeft + step + 'px';
+                }
+            }, 15)
+        }
+        var div = document.querySelector('div');
+        var span = document.querySelector('span');
+        var btn500 = document.querySelector('.btn500');
+        var btn800 = document.querySelector('.btn800');
+        animate(div, 400);
+        btn500.addEventListener('click', function () {
+            animate(span, 500,);
+        })
+        btn800.addEventListener('click', function () {
+            animate(span, 800, function () {
+                span.style.backgroundColor = 'green'
+            });
+        })
+
+    </script>
+</body>
+
+</html>

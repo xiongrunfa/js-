@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文本框显示隐藏</title>
+    <style>
+        input {
+            outline: none;
+            color: #999999;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" value="手机">
+    <script>
+        var text = document.querySelector('input');
+        text.onfocus = function () {
+            if (this.value === '手机') {
+                this.value = ''
+            }
+            this.select();
+            this.style.color = '#333333';
+        }
+        text.onblur = function () {
+            if (this.value === '') {
+                this.value = '手机'
+            }
+            this.style.color = '#999999';
+        }
+    </script>
+</body>
+
+</html>

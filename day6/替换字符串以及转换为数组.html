@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 把字符串里面的z替换为*
+        var str = 'qwzzdgvzqdezcd'
+        while (str.indexOf('z') !== -1) {
+            str = str.replace('z', '*')
+        }
+        console.log(str);
+        // 把字符串转换为数组
+        var str1 = 'red, pink,blue';
+        console.log(str1.split(','));
+        var str2 = 'red&pink&blue';
+        console.log(str2.split('&'));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
